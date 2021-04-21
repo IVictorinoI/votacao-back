@@ -2,6 +2,6 @@ export default class Creditor {
     id: string
     assemblyId: string
     name: string
-    classId: string
+    creditorClassId: string
     value: number
 }

@@ -9,7 +9,7 @@ export default class ConfirmationStatusRepositoryMemory implements IConfirmation
     }
     
     update(confirmationStatus: ConfirmationStatus): void {
-        const current = this.get(confirmationStatus.assemblyId)
+        const current = this.confirmationsStatus.find(p => p.id == confirmationStatus.id)
         current.expectedValue = confirmationStatus.expectedValue
         current.confirmedValue = confirmationStatus.confirmedValue
         current.confirmedPercentValue = confirmationStatus.confirmedPercentValue
@@ -18,8 +18,8 @@ export default class ConfirmationStatusRepositoryMemory implements IConfirmation
         current.confirmedPercentCount = confirmationStatus.confirmedPercentCount
     }
 
-    get(assemblyId: string): ConfirmationStatus {
-        return this.confirmationsStatus.find(p => p.assemblyId == assemblyId)
+    getAll(assemblyId: string): Array<ConfirmationStatus> {
+        return this.confirmationsStatus.filter(p => p.assemblyId == assemblyId)
     }
 
 }

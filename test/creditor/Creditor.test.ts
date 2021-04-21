@@ -7,14 +7,14 @@ test('Creditor insert', async function(){
         id: '1',
         assemblyId,
         name: 'Victor',
-        classId: '1',
+        creditorClassId: '1',
         value: 133.50
     })
     creditorRepo.insert({
         id: '2',
         assemblyId,
         name: 'Gessica',
-        classId: '1',
+        creditorClassId: '1',
         value: 123.55
     })
 

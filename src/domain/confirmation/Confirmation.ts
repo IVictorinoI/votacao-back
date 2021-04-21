@@ -5,6 +5,7 @@ export default class Confirmation {
     id: string
     assemblyId: string
     creditorId: string
+    creditorClassId: string
     date: Date
     percent: number
     value: number
@@ -16,7 +17,7 @@ export default class Confirmation {
     confirm(creditor: Creditor): void {
         this.creditorId = creditor.id
         this.assemblyId = creditor.assemblyId
-        
+        this.creditorClassId = creditor.creditorClassId
         this.value = creditor.value
     }
 

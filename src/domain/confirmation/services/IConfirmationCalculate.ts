@@ -1,5 +1,6 @@
 import Confirmation from "../Confirmation";
 
 export default interface IConfirmationCalculate {
-    calculate(confirmation: Confirmation) : void
+    calculate(assemblyId: string) : void
+    calculateByClass(assemblyId: string, creditorClassId: string) : void
 }
