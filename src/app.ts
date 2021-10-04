@@ -5,12 +5,17 @@ import * as mongoose from 'mongoose'
 import Controller from './infra/interfaces/controller.interface'
 import errorMiddleware from './infra/middleware/error.middleware'
 import corsMiddleware from './infra/middleware/cors.middleware'
+import * as moment from 'moment-timezone'
 
 class App {
   public app: express.Application;
 
   constructor(controllers: Controller[]) {
     this.app = express();
+
+    Date.prototype.toJSON = function(){
+      return moment(this).format("YYYY-MM-DDTHH:mm:ss");;
+    }      
 
     this.connectToTheDatabase();
     this.initializeMiddlewares();
@@ -49,7 +54,7 @@ class App {
     const {
       MONGODB_URI,
     } = process.env;
-    mongoose.connect(MONGODB_URI || 'mongodb://localhost/votacao');
+    mongoose.connect(MONGODB_URI || 'mongodb://localhost/portalvotacao');
   }
 }
 

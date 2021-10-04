@@ -1,5 +1,7 @@
 export default class Assembly {
-    id: string
+    _id: string
     name: string
     date: Date
+    code?: number
+    active?: boolean    
 }
