@@ -1,10 +1,10 @@
-import bodyParser from 'body-parser';
-import cookieParser from 'cookie-parser';
-import express from 'express';
-import mongoose from 'mongoose';
-import Controller from './infra/interfaces/controller.interface';
-import errorMiddleware from './infra/middleware/error.middleware';
-import corsMiddleware from './infra/middleware/cors.middleware';
+import * as bodyParser from 'body-parser'
+import * as cookieParser from 'cookie-parser'
+import * as express from 'express'
+import * as mongoose from 'mongoose'
+import Controller from './infra/interfaces/controller.interface'
+import errorMiddleware from './infra/middleware/error.middleware'
+import corsMiddleware from './infra/middleware/cors.middleware'
 
 class App {
   public app: express.Application;

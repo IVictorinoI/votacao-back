@@ -11,7 +11,7 @@ export default class ConfirmationStatus {
     confirmedCount: number
     confirmedPercentCount: number
 
-    constructor(assemblyId: string, creditorClassId, expectedValue: number, expectedCount: number) {
+    constructor(assemblyId: string, creditorClassId: string, expectedValue: number, expectedCount: number) {
         this.assemblyId = assemblyId
         this.creditorClassId = creditorClassId
         this.id = creditorClassId
