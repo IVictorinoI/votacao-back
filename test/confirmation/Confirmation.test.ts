@@ -4,7 +4,7 @@ import ConfirmationRepositoryMemory from "../../src/repository/confirmation/Conf
 import CreditorClassRepositoryMemory from "../../src/repository/creditor-class/CreditorClassRepositoryMemory"
 import CreditorRepositoryMemory from "../../src/repository/creditor/CreditorRepositoryMemory"
 
-test.skip('Confirmation insert', async function(){
+test('Confirmation insert', async function(){
     const confirmationRepo = new ConfirmationRepositoryMemory()
     const creditorRepo = new CreditorRepositoryMemory()
     const confirmationInsert = new ConfirmationInsert(confirmationRepo, creditorRepo)
