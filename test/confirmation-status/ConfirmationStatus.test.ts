@@ -16,12 +16,14 @@ test.skip('Confirmation initializer', async function(){
 
     creditorClassRepo.insert({
         id: '1',
-        name: 'Trabalhista'
+        name: 'Trabalhista',
+        calcType: 'percent'
     })
 
     creditorClassRepo.insert({
         id: '2',
-        name: 'Quirografário'
+        name: 'Quirografário',
+        calcType: 'percent'
     })    
 
     creditorRepo.insert({
@@ -59,17 +61,20 @@ test.skip('Confirmation percent and total', async function(){
 
     creditorClassRepo.insert({
         id: '1',
-        name: 'Trabalhista'
+        name: 'Trabalhista',
+        calcType: 'percent'
     })
 
     creditorClassRepo.insert({
         id: '2',
-        name: 'Quirografário'
+        name: 'Quirografário',
+        calcType: 'percent'
     })    
 
     creditorClassRepo.insert({
         id: '3',
-        name: 'Garantia real'
+        name: 'Garantia real',
+        calcType: 'percent'
     })        
 
     creditorRepo.insert({
